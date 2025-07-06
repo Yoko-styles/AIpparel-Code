@@ -26,10 +26,10 @@ model_max_length: 2100
 version: liuhaotian/llava-v1.5-7b
 precision: bf16 
 conv_type: llava_v1
-pre_trained: /miele/george/garment/aipparel_pretrained.pth 
+pre_trained: /root/aipparel/models/aipparel_pretrained.pth 
 inference_json: assets/data_configs/inference_example.json
 vision_tower: openai/clip-vit-large-patch14
 panel_classification: assets/data_configs/panel_classes_garmentcodedata.json
 hydra:
   run:
-    dir: /miele/george/garment/sewformer/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    dir: /root/aipparel/AIpparel-Code/logs/
