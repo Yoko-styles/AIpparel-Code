@@ -303,53 +303,6 @@ def main(cfg: MainConfig):
         import time
         while True:
             time.sleep(60) 
-             
-    # log.info(f"Working directory : {os.getcwd()}")
-    # output_dir = hydra.core.hydra_config.HydraConfig.get().runtime.output_dir
-    # log.info(f"Output directory : {output_dir}")
-
-    # # Example: Run multiple inferences with different prompts
-    # custom_prompts = [
-    #     "A dress with a square neckline and a pleated skirt",
-    #     "A flowing evening gown with off-shoulder sleeves",
-    #     "A casual summer dress with floral patterns",
-    #     "A vintage-inspired blouse with puffed sleeves"
-    # ]
-    
-    # save_path = f'{output_dir}/inference'
-    # os.makedirs(save_path, exist_ok=True)
-    
-    # for i, prompt in enumerate(custom_prompts):
-    #     try:
-    #         # Run inference - this is fast since model is already loaded
-    #         output_text, patterns, input_dict = run_inference(model, tokenizer, dataset, torch_dtype, cfg, prompt)
-            
-    #         # Save results
-    #         data_name = f"sample_{i}"
-    #         os.makedirs(os.path.join(save_path, data_name), exist_ok=True)
-    #         patterns.serialize(os.path.join(save_path, data_name), spec_only=False, with_3d=False, with_text=False, view_ids=False, to_subfolder=False, tag=f'_pred')
-            
-    #         if "gt_patterns" in input_dict:
-    #             for gt_pattern in input_dict["gt_patterns"][0]:
-    #                 gt_pattern.serialize(os.path.join(save_path, data_name), spec_only=False, with_3d=False, with_text=False, view_ids=False, to_subfolder=False, tag=f'_gt')
-            
-    #         # Save output text
-    #         with open(os.path.join(save_path, data_name, "output.txt"), "w") as f:
-    #             question = input_dict["questions_list"][0]
-    #             f.write(f"Question: {question}\n")
-    #             f.write(f"Output Text: {output_text}\n")
-    #             f.write(f"Custom Prompt: {prompt}\n")
-            
-    #         # Save input image if exists
-    #         if os.path.isfile(input_dict["image_paths"][0]):
-    #             cond_img = Image.open(input_dict["image_paths"][0])
-    #             cond_img.save(os.path.join(save_path, data_name, 'input.png'))
-                
-    #         log.info(f"Results for prompt {i+1} saved to: {os.path.join(save_path, data_name)}")
-            
-    #     except Exception as e:
-    #         log.error(f"Error processing prompt '{prompt}': {e}")
-
 
 # Example usage for API calls
 def initialize_model(cfg: MainConfig):
