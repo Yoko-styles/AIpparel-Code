@@ -49,6 +49,9 @@ Download the pre-trained AIpparel model weights [here](https://huggingface.co/ge
 ## Logging
 We provide logging logistics using WANDB. Set your wandb info [here](configs/experiment/wandb_info/wandb.yaml) and login to your account through the command line.
 
+## Inference
+We provide an example inference script at [inference.sh](https://github.com/georgeNakayama/AIpparel-Code/blob/master/scripts/inference.sh). Please modify the [inference_example.json](https://github.com/georgeNakayama/AIpparel-Code/blob/master/assets/data_configs/inference_example.json) file to use your image/text. 
+
 ## Evaluation 
 We provide evaluation scripts under [eval_scripts](eval_scripts). Change environment variables to set the visible GPU devices and the path to this repository. Metrics will be saved to Wandb, and generated outputs will be saved to the output directory (set in the [config](configs/aipparel.yaml)).
 
